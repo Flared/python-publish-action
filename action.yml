@@ -1,0 +1,19 @@
+name: "flared/python-publish-action"
+description: "Publish to Flare's private repositories"
+inputs:
+  AWS_ACCESS_KEY_ID:
+    description: "AWS Access Key Id"
+    required: true
+  AWS_SECRET_ACCESS_KEY:
+    description: "AWS Secret Access"
+    required: true
+  FILES:
+    description: "Files to upload."
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.AWS_ACCESS_KEY_ID }}
+    - ${{ inputs.AWS_SECRET_ACCESS_KEY }}
+    - ${{ inputs.FILES }}
