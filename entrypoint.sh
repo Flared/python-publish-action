@@ -7,7 +7,7 @@ export AWS_REGION=us-east-1
 
 export AWS_ACCESS_KEY_ID="$1"
 export AWS_SECRET_ACCESS_KEY="$2"
-export AWS_SECRET_ACCESS_KEY="$3"
+export AWS_SESSION_TOKEN="$3"
 FILES="$4"
 
 export TWINE_USERNAME=aws
