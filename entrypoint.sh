@@ -7,7 +7,8 @@ export AWS_REGION=us-east-1
 
 export AWS_ACCESS_KEY_ID="$1"
 export AWS_SECRET_ACCESS_KEY="$2"
-FILES="$3"
+export AWS_SECRET_ACCESS_KEY="$3"
+FILES="$4"
 
 export TWINE_USERNAME=aws
 export TWINE_PASSWORD=$(aws codeartifact get-authorization-token --domain flared --domain-owner 409905535292 --query authorizationToken --output text)
